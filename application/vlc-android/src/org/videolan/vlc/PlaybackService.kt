@@ -334,7 +334,7 @@ class PlaybackService : MediaBrowserServiceCompat(), LifecycleOwner, CoroutineSc
                 if (BuildConfig.DEBUG) Log.i(TAG, "MediaPlayer.Event.Playing")
                 executeUpdate(true)
                 lastTime = getTime()
-                audioFocusHelper.changeAudioFocus(true)
+                //audioFocusHelper.changeAudioFocus(false)
                 if (!wakeLock.isHeld) wakeLock.acquire()
                 showNotification()
                 nbErrors = 0
